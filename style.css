@@ -1,11 +1,51 @@
 
-#container{
+.container{
     width:100vw;
     height: 100vh;
+    position:relative;
 }
 
-.box{
-    width:150px;
-    height:150px;
-    background-color: pink;
+.seed{
+    position:absolute;
+    right:60%;
+    top: 50%;
+}
+
+.grow{
+    position:absolute;
+    width:200px;
+    height: 240px;
+    top: 50%;
+    left: 50%;
+}
+
+
+.pot{
+    position:absolute;
+    bottom: 0;
+}
+
+.sprout{
+    position: absolute;
+    top:0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: grow 3s ease-in-out;
+}
+
+@keyframes grow{
+    from{
+        width:50px;
+        position: absolute;
+        top:40px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    to{
+        width:158px;
+        top:0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
